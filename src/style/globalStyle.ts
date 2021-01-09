@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     width: 100%;
-    background-color:${theme.colors.black};
     height: 100%;
     font-family: 'futura-pt', 'Open sans';
     font-weight: 400;
