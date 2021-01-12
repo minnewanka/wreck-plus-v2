@@ -4,12 +4,10 @@ import Routes from "./route";
 
 const App = () => {
   return (
-    <div>
-      <Theme>
-        <GlobalStyle />
-        <Routes />
-      </Theme>
-    </div>
+    <Theme>
+      <GlobalStyle />
+      <Routes />
+    </Theme>
   );
 };
 
