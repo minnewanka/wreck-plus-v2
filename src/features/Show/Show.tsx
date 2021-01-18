@@ -12,11 +12,13 @@ import Hangar from "../../assets/images/shows/Hangar.jpg";
 const Section = styled.section`
   text-align: center;
   background-color: #191a1e;
-  padding: 5rem 1rem;
 `;
 
 const Img = styled.img`
   max-width: 100%;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const Show: React.FC = () => {
@@ -84,7 +86,7 @@ const Show: React.FC = () => {
   };
 
   return (
-    <Section>
+    <Section id="shows">
       <h1 className="section-title">Shows</h1>
       <Carousel responsive={responsive} itemClass="image-item">
         {data.map((item) => (

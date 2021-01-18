@@ -68,6 +68,7 @@
   },
   "devDependencies": {
     "@types/react-modal": "^3.10.6",
+    "@types/react-scrollspy": "^3.3.3",
     "@types/styled-components": "^5.1.7"
   }
 }

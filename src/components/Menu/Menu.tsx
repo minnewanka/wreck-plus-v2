@@ -1,6 +1,20 @@
 import React, { useEffect } from "react";
+import Scrollspy from "react-scrollspy";
 import { MENU } from "../../utils/constants";
 import styled from "styled-components";
+
+const Anchor = styled.a`
+  &:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+  &:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+`;
 
 const Div = styled.div`
   display: flex;
@@ -8,6 +22,7 @@ const Div = styled.div`
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  font-family: "Corben", regular;
   font-size: 1.2rem;
   letter-spacing: 2px;
   height: 3rem;
@@ -18,6 +33,10 @@ const Div = styled.div`
     width: 100%;
     transition: height 250ms ease-in-out, top 250ms ease-in-out;
     z-index: 1;
+  }
+
+  .is-current {
+    color: ${(props) => props.theme.colors.white};
   }
 `;
 
@@ -40,9 +59,13 @@ const Menu: React.FC = () => {
 
   return (
     <Div id="menu">
-      {MENU.map((item) => (
-        <Item>{item}</Item>
-      ))}
+      <Scrollspy items={MENU} currentClassName="is-current">
+        {MENU.map((item) => (
+          <Item>
+            <Anchor href={`/#${item}`}>{item}</Anchor>
+          </Item>
+        ))}
+      </Scrollspy>
     </Div>
   );
 };

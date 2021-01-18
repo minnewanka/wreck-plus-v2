@@ -1,12 +1,15 @@
 import GlobalStyle from "./style/globalStyle";
 import { Theme } from "./style/theme";
 import Routes from "./route";
+import { Layout } from "./components";
 
 const App = () => {
   return (
     <Theme>
       <GlobalStyle />
-      <Routes />
+      <Layout>
+        <Routes />
+      </Layout>
     </Theme>
   );
 };

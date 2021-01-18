@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Header, Menu } from "../../components";
 import { Band, Music, Follow, Video, Show } from "../../features";
 import Img from "../../assets/images/hero-unit.jpg";
 import Img2 from "../../assets/images/hero-unit-2.jpg";
-import Img3 from "../../assets/images/hero-unit-3.jpg";
 
 const HeroUnit = styled.div<{ img: string }>`
   background-image: url(${(props) => props.img});
@@ -18,15 +16,13 @@ const HeroUnit = styled.div<{ img: string }>`
 const Home: React.FC = () => {
   return (
     <>
-      <Header />
-      <Menu />
       <Video />
       <Band />
       <HeroUnit img={Img} />
       <Music />
       <HeroUnit img={Img2} />
       <Show />
-      <HeroUnit img={Img3} />
+      {/* <HeroUnit img={Img3} /> */}
       <Follow />
     </>
   );

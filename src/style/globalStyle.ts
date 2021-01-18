@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     width: 100%;
     height: 100%;
-    font-family: 'futura-pt', 'Open sans';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: ${theme.colors.grey};
     background-color: ${theme.colors.black};
@@ -33,7 +33,13 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
   }
 
+  ol {
+    display:block;
+    list-style-position: inside;
+  }
+
   section {
+    padding-top: 2rem;
     padding-bottom: 5rem;
   }
 
@@ -46,7 +52,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .section-title {
+    font-family: 'Corben',regular;
     text-transform: uppercase;
+    margin-bottom: 3rem;
     font-size: 3rem;
   }
 .image-item {

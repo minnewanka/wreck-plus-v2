@@ -1,5 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Home, Music } from "../features";
+import { Home } from "../features";
+import DarkConstructor from "../features/Music/Albums/DarkConstructor";
+import StarcrossedLovers from "../features/Music/Albums/StarcrossedLovers";
+import Spies from "../features/Music/Albums/Spies";
+import Riding from "../features/Music/Albums/Riding";
 
 const routes = [
   {
@@ -10,11 +14,28 @@ const routes = [
     component: Home,
   },
   {
-    name: "Music",
-    title: "Music",
-    path: "/music/",
+    name: "DarkConstructor",
+    path: "/albums/dark-constructor",
     exact: true,
-    component: Music,
+    component: DarkConstructor,
+  },
+  {
+    name: "StarcrossedLovers",
+    path: "/albums/starcrossed-lovers",
+    exact: true,
+    component: StarcrossedLovers,
+  },
+  {
+    name: "Spies",
+    path: "/albums/spies",
+    exact: true,
+    component: Spies,
+  },
+  {
+    name: "Riding",
+    path: "/albums/riding",
+    exact: true,
+    component: Riding,
   },
 ];
 
