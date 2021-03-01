@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, StyledContainer } from "./styledComponents";
+import { Title, StyledContainer, StyledRow } from "./styledComponents";
 import { Row } from "react-grid-system";
 import Cover from "../../../assets/images/albums/cover/spies.jpg";
 import Description from "./Description";
@@ -18,33 +18,23 @@ const Spies: React.FC = () => {
       </Row>
       <Description cover={Cover}>
         <p>
-          EP live enregistré dans des conditions extrêmes en Avril 2013, à La
-          Cantine de Belleville (Paris).
-        </p>
-        <br />
-        <p>
-          Sortie : Novembre 2013.
-          <br /> En écoute et téléchargement libres sur Bandcamp et également
-          téléchargeable sur notre site avec une reprise en bonus!
-        </p>
-        <br />
-        <p>
-          Mixage : Leirbag Javan.
-          <br />
-          Pochette : Gabriel Redon & Leirbag Javan.
-        </p>
-        <p>
-          Philippe Gauchot : chant
-          <br />
-          Leirbag Javan : guitare, choeurs
-          <br />
-          Gabriel Redon : basse
-          <br />
-          Axel Thomas : batterie, choeurs
-          <br />
+          RECORDED UNDER EXTREME CONDITIONS, IN THE HEAT OF "LA CANTINE DE
+          BELLEVILLE"...!
         </p>
       </Description>
       <Tracklist data={tracklist} />
+      <StyledRow>
+        <iframe
+          title="bandcamp_spies"
+          style={{ border: 0, width: "100%", height: "120px" }}
+          src="https://bandcamp.com/EmbeddedPlayer/album=975007311/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/"
+          seamless
+        >
+          <a href="https://wreckplus.bandcamp.com/album/spies-moles-and-sabotage-live">
+            Spies, Moles And Sabotage! (Live) by Wreck Plus
+          </a>
+        </iframe>
+      </StyledRow>
     </StyledContainer>
   );
 };

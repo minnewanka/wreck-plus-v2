@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home } from "../features";
+import { Layout, ScrollToTop } from "../components";
 import DarkConstructor from "../features/Music/Albums/DarkConstructor";
 import StarcrossedLovers from "../features/Music/Albums/StarcrossedLovers";
 import Spies from "../features/Music/Albums/Spies";
 import Riding from "../features/Music/Albums/Riding";
+import Roars from "../features/Music/Albums/Roars";
 
 const routes = [
   {
@@ -37,20 +39,30 @@ const routes = [
     exact: true,
     component: Riding,
   },
+  {
+    name: "Roars",
+    path: "/albums/roars",
+    exact: true,
+    component: Roars,
+  },
 ];
 
 const Routes = () => (
   <Router>
-    <Switch>
-      {routes.map((route) => (
-        <Route
-          key={route.name}
-          path={route.path}
-          exact={route.exact}
-          component={route.component}
-        />
-      ))}
-    </Switch>
+    <ScrollToTop>
+      <Switch>
+        <Layout>
+          {routes.map((route) => (
+            <Route
+              key={route.name}
+              path={route.path}
+              exact={route.exact}
+              component={route.component}
+            />
+          ))}
+        </Layout>
+      </Switch>
+    </ScrollToTop>
   </Router>
 );
 

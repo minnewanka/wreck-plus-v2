@@ -61,7 +61,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
       alignItems: "center",
       justifyContent: "center",
       backgroundColor: "rgba(0, 0, 0, 0.7)",
-      zIndex: 99,
+      zIndex: 3000,
     },
     content: {
       position: "fixed", // to override default styles

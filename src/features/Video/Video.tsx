@@ -6,6 +6,9 @@ const Div = styled.div`
   margin: auto;
   padding: 2rem 0;
   width: 75%;
+  @media (max-width: ${(props) => props.theme.device.md}) {
+    width: 100%;
+  }
 `;
 const PlayerWrapper = styled.div`
   position: relative;
@@ -20,7 +23,7 @@ const StyledReactPlayer = styled(ReactPlayer)`
 
 const Video: React.FC = () => {
   return (
-    <Div>
+    <Div id="home">
       <PlayerWrapper>
         <StyledReactPlayer
           url="https://youtu.be/yJXCO7bVUww"

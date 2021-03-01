@@ -3,8 +3,6 @@ import { useHistory } from "react-router-dom";
 import styled, { css } from "styled-components";
 import DarkConstructor from "../../assets/images/albums/cover/dark-constructor.jpg";
 import StarCrossed from "../../assets/images/albums/cover/starcrossed.jpg";
-import OverWarLive from "../../assets/images/albums/cover/over-war-live.jpg";
-import OverWarLive2 from "../../assets/images/albums/cover/over-war-live-2.jpg";
 import Riding from "../../assets/images/albums/cover/riding.jpg";
 import Roars from "../../assets/images/albums/cover/roars.jpg";
 import Spies from "../../assets/images/albums/cover/spies.jpg";
@@ -16,9 +14,12 @@ const Section = styled.section`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 2fr));
   grid-gap: 20px;
   align-items: stretch;
+  @media (max-width: ${(props) => props.theme.device.md}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const Text = styled.div`
@@ -41,6 +42,7 @@ const Img = styled.img`
   transition: transform 0.5s ease;
   }
 `;
+
 const Div = styled.div<{ hasDetail: boolean }>`
   overflow: hidden;
   background-color: black;
@@ -67,6 +69,12 @@ const Music: React.FC = () => {
   const history = useHistory();
   const data = [
     {
+      src: Roars,
+      path: "/albums/roars",
+      text: "Roars in the Dead of Night",
+      hasDetail: true,
+    },
+    {
       src: DarkConstructor,
       path: "/albums/dark-constructor",
       text: "Dark Construktor (2016)",
@@ -79,16 +87,10 @@ const Music: React.FC = () => {
       hasDetail: true,
     },
     {
-      src: OverWarLive,
-      path: "/albums/dark-constructor",
-      text: "Dark Construktor (2016)",
-      hasDetail: false,
-    },
-    {
-      src: OverWarLive2,
-      path: "/albums/dark-constructor",
-      text: "Dark Construktor (2016)",
-      hasDetail: false,
+      src: Spies,
+      path: "/albums/spies",
+      text: "SPIES, MOLES, AND SABOTAGE!",
+      hasDetail: true,
     },
     {
       src: Riding,
@@ -96,26 +98,15 @@ const Music: React.FC = () => {
       text: "Riding The Derelict",
       hasDetail: true,
     },
-    {
-      src: Spies,
-      path: "/albums/spies",
-      text: "SPIES, MOLES, AND SABOTAGE!",
-      hasDetail: true,
-    },
-    {
-      src: Roars,
-      path: "/albums/dark-constructor",
-      text: "Roars",
-      hasDetail: false,
-    },
   ];
   return (
     <Section id="music">
       <div className="wrapper">
         <h1 className="section-title">Music</h1>
         <Grid>
-          {data.map((item) => (
+          {data.map((item, index) => (
             <Div
+              key={`album_${index}`}
               hasDetail={item.hasDetail}
               onClick={() => history.push(item.path)}
             >

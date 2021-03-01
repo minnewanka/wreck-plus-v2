@@ -8,6 +8,13 @@ const theme = {
     white: "white",
   },
   fonts: ["sans-serif", "Roboto"],
+  device: {
+    sm: "576px",
+    md: "768px",
+    lg: "992px",
+    xl: "1200px",
+    xxl: "1600px",
+  },
 };
 
 const Theme: React.FC = ({ children }: { children?: React.ReactNode }) => (

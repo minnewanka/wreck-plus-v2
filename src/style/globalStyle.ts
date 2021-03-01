@@ -26,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
       overflow: hidden;
       height: 100vh;
     }
+
+}
+.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
   div#root {

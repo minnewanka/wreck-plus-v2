@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Hidden } from "react-grid-system";
 
-import { Band, Music, Follow, Video, Show } from "../../features";
+import { Band, Music, Video, Show } from "../../features";
 import Img from "../../assets/images/hero-unit.jpg";
 import Img2 from "../../assets/images/hero-unit-2.jpg";
 
@@ -18,12 +19,14 @@ const Home: React.FC = () => {
     <>
       <Video />
       <Band />
-      <HeroUnit img={Img} />
+      <Hidden xs sm>
+        <HeroUnit img={Img} />
+      </Hidden>
       <Music />
-      <HeroUnit img={Img2} />
+      <Hidden xs sm>
+        <HeroUnit img={Img2} />
+      </Hidden>
       <Show />
-      {/* <HeroUnit img={Img3} /> */}
-      <Follow />
     </>
   );
 };

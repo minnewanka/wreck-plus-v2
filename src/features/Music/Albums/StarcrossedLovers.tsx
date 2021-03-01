@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, StyledContainer } from "./styledComponents";
+import { Title, StyledContainer, StyledRow } from "./styledComponents";
 import { Row } from "react-grid-system";
 import Cover from "../../../assets/images/albums/cover/starcrossed.jpg";
 import Description from "./Description";
@@ -36,6 +36,18 @@ const StarcrossedLovers: React.FC = () => {
         </p>
       </Description>
       <Tracklist data={tracklist} />
+      <StyledRow>
+        <iframe
+          title="starcrossed"
+          style={{ border: 0, width: "100%", height: "120px" }}
+          src="https://bandcamp.com/EmbeddedPlayer/album=2579238566/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/"
+          seamless
+        >
+          <a href="https://wreckplus.bandcamp.com/album/starcrossed-lovers-single">
+            Starcrossed Lovers (Single) by Wreck Plus
+          </a>
+        </iframe>
+      </StyledRow>
       <Reception>
         <p>
           “Le morceau s’étale sur plus de six minutes sans temps faible, la

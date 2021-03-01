@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, StyledContainer } from "./styledComponents";
+import { Title, StyledContainer, StyledRow } from "./styledComponents";
 import { Row } from "react-grid-system";
 import Cover from "../../../assets/images/albums/cover/riding.jpg";
 import Description from "./Description";
@@ -50,6 +50,19 @@ const Riding: React.FC = () => {
         </p>
       </Description>
       <Tracklist data={tracklist} />
+
+      <StyledRow>
+        <iframe
+          title="riding-the-dereclict"
+          style={{ border: 0, width: "100%", height: "120px" }}
+          src="https://bandcamp.com/EmbeddedPlayer/album=1441791368/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/"
+          seamless
+        >
+          <a href="https://wreckplus.bandcamp.com/album/riding-the-derelict-ep">
+            Riding The Derelict (EP) by Wreck Plus
+          </a>
+        </iframe>
+      </StyledRow>
     </StyledContainer>
   );
 };

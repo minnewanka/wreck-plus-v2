@@ -5,7 +5,9 @@ import logo from "../../assets/images/logo-1.jpg";
 const Section = styled.section`
   text-align: center;
   background-color: #191a1e;
-  height: 100vh;
+  @media (max-width: ${(props) => props.theme.device.xl}) {
+    height: 100vh;
+  }
 `;
 
 const Div = styled.div`
