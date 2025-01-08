@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { Hidden } from "react-grid-system";
 
 import { Band, Music, Video, Show } from "../../features";
-import Img from "../../assets/images/hero-unit.jpg";
-import Img2 from "../../assets/images/hero-unit-2.jpg";
 
 const HeroUnit = styled.div<{ img: string }>`
   background-image: url(${(props) => props.img});
@@ -20,11 +18,11 @@ const Home: React.FC = () => {
       <Video />
       <Band />
       <Hidden xs sm>
-        <HeroUnit img={Img} />
+        <HeroUnit img="/images/hero-unit.jpg" />
       </Hidden>
       <Music />
       <Hidden xs sm>
-        <HeroUnit img={Img2} />
+        <HeroUnit img="/images/hero-unit-2.jpg" />
       </Hidden>
       <Show />
     </>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Title, StyledContainer, StyledRow } from "./styledComponents";
 import { Row } from "react-grid-system";
-import Cover from "../../../assets/images/albums/cover/starcrossed.jpg";
 import Description from "./Description";
 import Tracklist from "./Tracklist";
 import Reception from "./Reception";
@@ -17,7 +16,7 @@ const StarcrossedLovers: React.FC = () => {
       <Row justify="center">
         <Title>Starcrossed Lovers</Title>
       </Row>
-      <Description cover={Cover}>
+      <Description cover="/images/albums/cover/starcrossed.jpg">
         <p>
           The Starcrossed Lovers single is a preview of Dark Construktor. It
           features the title track with a different mix from the full EP with

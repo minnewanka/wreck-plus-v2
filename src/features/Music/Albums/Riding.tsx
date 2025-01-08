@@ -1,7 +1,6 @@
 import React from "react";
 import { Title, StyledContainer, StyledRow } from "./styledComponents";
 import { Row } from "react-grid-system";
-import Cover from "../../../assets/images/albums/cover/riding.jpg";
 import Description from "./Description";
 import Tracklist from "./Tracklist";
 
@@ -17,7 +16,7 @@ const Riding: React.FC = () => {
       <Row justify="center">
         <Title>RIDING THE DERELICT</Title>
       </Row>
-      <Description cover={Cover}>
+      <Description cover="/images/albums/cover/riding.jpg">
         <p>This is the first studio EP of Wreck Plus.</p>
         <br />
         <p>

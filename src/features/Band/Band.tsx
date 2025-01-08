@@ -1,6 +1,6 @@
 import React from "react";
+import Image from "next/image";
 import styled from "styled-components";
-import logo from "../../assets/images/logo-1.jpg";
 
 const Section = styled.section`
   text-align: center;
@@ -16,10 +16,6 @@ const Div = styled.div`
   max-width: 700px;
   padding-right: 10px;
   padding-left: 10px;
-`;
-
-const Img = styled.img`
-  margin: 1rem;
 `;
 
 const Band: React.FC = () => {
@@ -53,7 +49,7 @@ const Band: React.FC = () => {
           <br />
           <br />
         </p>
-        <Img src={logo} alt="" />
+        <Image src="/images/logo-1.jpg" alt="" fill />
       </Div>
     </Section>
   );

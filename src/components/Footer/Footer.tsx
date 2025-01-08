@@ -1,9 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Facebook from "../../assets/images/social/facebook.png";
-import Spotify from "../../assets/images/social/spotify.png";
-import Twitter from "../../assets/images/social/twitter.png";
-import Youtube from "../../assets/images/social/youtube.png";
 
 const Div = styled.div`
   padding: 1rem;
@@ -29,13 +25,22 @@ const Icon = styled.img`
 
 const Footer: React.FC = () => {
   const data = [
-    { src: Youtube, link: "https://www.youtube.com/user/wreckplusdigitalbox" },
-    { src: Facebook, link: "https://www.facebook.com/wreckplus/" },
     {
-      src: Spotify,
+      src: "/images/social/youtube.png",
+      link: "https://www.youtube.com/user/wreckplusdigitalbox",
+    },
+    {
+      src: "/images/social/facebook.png",
+      link: "https://www.facebook.com/wreckplus/",
+    },
+    {
+      src: "/images/social/spotify.png",
       link: "https://open.spotify.com/artist/67O5W0HYQmZhcFq24Pew9q",
     },
-    { src: Twitter, link: "https://twitter.com/wreck_plus" },
+    {
+      src: "/images/social/twitter.png",
+      link: "https://twitter.com/wreck_plus",
+    },
   ];
   return (
     <Div>

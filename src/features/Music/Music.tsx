@@ -1,11 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import { useHistory } from "react-router-dom";
 import styled, { css } from "styled-components";
-import DarkConstructor from "../../assets/images/albums/cover/dark-constructor.jpg";
-import StarCrossed from "../../assets/images/albums/cover/starcrossed.jpg";
-import Riding from "../../assets/images/albums/cover/riding.jpg";
-import Roars from "../../assets/images/albums/cover/roars.jpg";
-import Spies from "../../assets/images/albums/cover/spies.jpg";
 
 const Section = styled.section`
   text-align: center;
@@ -69,31 +65,31 @@ const Music: React.FC = () => {
   const history = useHistory();
   const data = [
     {
-      src: Roars,
+      src: "/images/albums/cover/roars.jpg",
       path: "/albums/roars",
       text: "Roars in the Dead of Night",
       hasDetail: true,
     },
     {
-      src: DarkConstructor,
+      src: "/images/albums/cover/dark-constructor.jpg",
       path: "/albums/dark-constructor",
       text: "Dark Construktor (2016)",
       hasDetail: true,
     },
     {
-      src: StarCrossed,
+      src: "/images/albums/cover/starcrossed.jpg",
       path: "/albums/starcrossed-lovers",
       text: "Starcrossed Lovers",
       hasDetail: true,
     },
     {
-      src: Spies,
+      src: "/images/albums/cover/spies.jpg",
       path: "/albums/spies",
       text: "SPIES, MOLES, AND SABOTAGE!",
       hasDetail: true,
     },
     {
-      src: Riding,
+      src: "/images/albums/cover/riding.jpg",
       path: "/albums/riding",
       text: "Riding The Derelict",
       hasDetail: true,
@@ -110,7 +106,7 @@ const Music: React.FC = () => {
               hasDetail={item.hasDetail}
               onClick={() => history.push(item.path)}
             >
-              <Img src={item.src} alt="" />
+              <Image src={item.src} alt="" fill />
               <Text>{item.text}</Text>
             </Div>
           ))}

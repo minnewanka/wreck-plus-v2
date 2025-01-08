@@ -1,4 +1,5 @@
 import React, { CSSProperties } from "react";
+import Image from "next/image";
 import Modal from "react-modal";
 import styled from "styled-components";
 import CloseButton from "./CloseButton";
@@ -85,7 +86,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
       contentLabel="Example Modal"
       style={customStyles}
     >
-      <img src={image ? image.src : ""} alt="" />
+      <Image src={image ? image.src : ""} alt="" fill />
       {hasPrevious && (
         <svg
           width="9"

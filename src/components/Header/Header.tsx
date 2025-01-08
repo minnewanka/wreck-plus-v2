@@ -1,7 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import Logo from "../../assets/images/Logo.png";
 
 const Div = styled.div`
   display: flex;
@@ -16,18 +16,13 @@ const ImgContainer = styled.div`
     width: 50%;
   }
 `;
-const Img = styled.img`
-  display: block;
-  width: 100%;
-  height: auto;
-`;
 
 const Header: React.FC = () => {
   const history = useHistory();
   return (
     <Div onClick={() => history.push("/")}>
       <ImgContainer>
-        <Img src={Logo} alt="" />
+        <Image src="images/Logo.png" alt="" fill />
       </ImgContainer>
     </Div>
   );

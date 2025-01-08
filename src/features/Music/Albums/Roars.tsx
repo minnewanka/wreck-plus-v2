@@ -1,7 +1,6 @@
 import React from "react";
 import { Title, StyledContainer, StyledRow } from "./styledComponents";
 import { Row } from "react-grid-system";
-import Cover from "../../../assets/images/albums/cover/roars.jpg";
 import Description from "./Description";
 import Tracklist from "./Tracklist";
 import Reception from "./Reception";
@@ -16,7 +15,7 @@ const Roars: React.FC = () => {
       <Row justify="center">
         <Title>ROARS IN THE DEAD OF NIGHT</Title>
       </Row>
-      <Description cover={Cover}>
+      <Description cover="/images/albums/cover/roars.jpg">
         <p>
           A stray cat wandering in the dead of the night. Instincts that were
           once deeply buried are coming back. Flirting with danger. Feeling

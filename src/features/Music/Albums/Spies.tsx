@@ -1,7 +1,6 @@
 import React from "react";
 import { Title, StyledContainer, StyledRow } from "./styledComponents";
 import { Row } from "react-grid-system";
-import Cover from "../../../assets/images/albums/cover/spies.jpg";
 import Description from "./Description";
 import Tracklist from "./Tracklist";
 
@@ -16,7 +15,7 @@ const Spies: React.FC = () => {
       <Row justify="center">
         <Title>SPIES, MOLES, AND SABOTAGE!</Title>
       </Row>
-      <Description cover={Cover}>
+      <Description cover="/images/albums/cover/spies.jpg">
         <p>
           RECORDED UNDER EXTREME CONDITIONS, IN THE HEAT OF "LA CANTINE DE
           BELLEVILLE"...!

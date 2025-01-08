@@ -1,10 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import styled from "styled-components";
-import Background from "../../assets/images/stars-bg.jpg";
-import Logo from "../../assets/images/Logo.png";
 
 const Div = styled.div`
-  background-image: url(${Background});
+  background-image: url("/images/stars-bg.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +16,7 @@ const Hero: React.FC = () => {
   return (
     <Div>
       <div>
-        <img src={Logo} alt="" />
+        <Image src="/images/Logo.png" alt="" />
       </div>
     </Div>
   );

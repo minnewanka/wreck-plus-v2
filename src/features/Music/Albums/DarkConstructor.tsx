@@ -1,7 +1,6 @@
 import React from "react";
 import { Title, StyledContainer, StyledRow } from "./styledComponents";
 import { Row } from "react-grid-system";
-import Cover from "../../../assets/images/albums/cover/dark-constructor.jpg";
 import Description from "./Description";
 import Tracklist from "./Tracklist";
 import Reception from "./Reception";
@@ -19,7 +18,7 @@ const DarkConstructor: React.FC = () => {
       <Row justify="center">
         <Title>Dark Constructor</Title>
       </Row>
-      <Description cover={Cover}>
+      <Description cover="/images/albums/cover/dark-constructor.jpg">
         <p>
           Dark Construktor is the second studio EP from Wreck Plus. The initial
           idea was to give an update on how our muiscal identity evolved almost
