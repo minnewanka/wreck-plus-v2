@@ -11,20 +11,18 @@ const Div = styled.div`
   cursor: pointer;
 `;
 const ImgContainer = styled.div`
-  pointer: cursor;
+  position: relative;
+  height: 200px;
   @media (max-width: ${(props) => props.theme.device.md}) {
     width: 50%;
   }
 `;
 
 const Header: React.FC = () => {
-  const history = useHistory();
   return (
-    <Div onClick={() => history.push("/")}>
-      <ImgContainer>
-        <Image src="images/Logo.png" alt="" fill />
-      </ImgContainer>
-    </Div>
+    <ImgContainer>
+      <Image src="images/Logo.png" alt="" fill objectFit="contain" />
+    </ImgContainer>
   );
 };
 

@@ -86,7 +86,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
       contentLabel="Example Modal"
       style={customStyles}
     >
-      <Image src={image ? image.src : ""} alt="" fill />
+      <img src={image ? image.src : ""} alt="" />
       {hasPrevious && (
         <svg
           width="9"

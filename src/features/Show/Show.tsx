@@ -105,7 +105,7 @@ const Show: React.FC = () => {
       <h1 className="section-title">Shows</h1>
       <Carousel responsive={responsive} itemClass="image-item">
         {data.map((item) => (
-          <Image
+          <Img
             key={`shows${item.id} `}
             src={item.src}
             alt=""
@@ -114,7 +114,6 @@ const Show: React.FC = () => {
                 ? () => openGallery(data, item.id)
                 : undefined
             }
-            fill
           />
         ))}
       </Carousel>

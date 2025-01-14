@@ -43,6 +43,7 @@ const Div = styled.div<{ hasDetail: boolean }>`
   overflow: hidden;
   background-color: black;
   position: relative;
+  height: 300px;
   ${(props) =>
     props.hasDetail &&
     css`

@@ -49,7 +49,14 @@ const Band: React.FC = () => {
           <br />
           <br />
         </p>
-        <Image src="/images/logo-1.jpg" alt="" fill />
+        <div style={{ position: "relative", height: 100 }}>
+          <Image
+            src="/images/logo-1.jpg"
+            alt=""
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
       </Div>
     </Section>
   );
