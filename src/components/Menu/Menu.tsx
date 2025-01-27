@@ -130,9 +130,9 @@ const Menu: React.FC = () => {
     window.onscroll = function sticky() {
       const menu = document.getElementById("menu")!;
       if (window.pageYOffset > 300) {
-        menu.classList.add("sticky");
+        menu?.classList?.add("sticky");
       } else {
-        menu.classList.remove("sticky");
+        menu?.classList?.remove("sticky");
       }
     };
   });

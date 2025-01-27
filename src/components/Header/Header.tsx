@@ -3,13 +3,6 @@ import Image from "next/image";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
-const Div = styled.div`
-  display: flex;
-  padding: 1rem;
-  background-color: ${(props) => props.theme.colors.black};
-  justify-content: center;
-  cursor: pointer;
-`;
 const ImgContainer = styled.div`
   position: relative;
   height: 200px;
