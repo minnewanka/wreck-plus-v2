@@ -25,7 +25,6 @@ const Text = styled.div`
   transform: translate(-50%, -50%);
   font-size: 1.2rem;
   width: 80%;
-  visibility: hidden;
   opacity: 0;
   color: ${(props) => props.theme.colors.white};
   cursor: pointer;
@@ -55,9 +54,8 @@ const Div = styled.div<{ hasDetail: boolean }>`
         opacity: 0.25;
       }
       :hover ${Text} {
-        visibility: visible;
         opacity: 1;
-        transition: visibility 0s linear 0s, opacity 1000ms;
+        transition: opacity 0s linear 0s, opacity 500ms;
       }
     `}
 `;
@@ -107,7 +105,7 @@ const Music: React.FC = () => {
               hasDetail={item.hasDetail}
               onClick={() => history.push(item.path)}
             >
-              <Image src={item.src} alt="" fill />
+              <Img src={item.src} alt="" />
               <Text>{item.text}</Text>
             </Div>
           ))}
